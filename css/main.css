@@ -1,5 +1,13 @@
 html,body{padding: 0; margin: 0; height: 100%;}
 
 /* main css */
-.wrap{width: 100%;}
-.board{display: flex; margin: 0 auto; width: 800px; height: 800px; background: #000;}
+.wrap{width: 100%; background-color: #fafafa; padding: 50px 0;}
+.board{display: flex; flex-direction: column; margin: 0 auto; width: 800px; height: 800px; background: #000;}
+.board .row{display: flex;}
+.board .white{background-color: ivory;}
+.board .black{background-color: #000;}
+.row div{font-size: 50px; text-align: center; line-height: 100px; width: 100px; height: 100px;}
+/* .row div.black i{background-color: #fff;} */
+.row div .player1{color: brown;}
+.row div .player2{color: burlywood}
+i:hover{cursor: pointer;}
