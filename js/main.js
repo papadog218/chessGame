@@ -21,46 +21,49 @@ $(function(){
         console.log(location);
 
 
-        // 이동범위 & 공격범위 표시
-        // if (player == "player2"){
-        //     if(unitName == "rook"){
-                
-        //     }
-        //     if(unitName == "knight"){
+        // 기물에 따른 행마법
+        if(player == "player2") {
+            if(unit == "pawn" && location.indexOf("2") != -1){ // 백의 한번도 안움직인 폰일때
+                if(location.indexOf("A") != -1){
+                   var alphabetArr = ["A","B","C","D","E","F","G","H"];
+                   var numArr = ["1","2","3","4","5","6","7","8"];
+                   for(i=0; i<8; i++){
+                        if(alphabetArr[i] != "A"){
+                            if(numArr[i] == "3" || numArr[i] == "4"){
+                                $("."+alphabetArr[i]+numArr[i]+" .move").removeClass("show");
+                            }
+                        } else {
+                            if(numArr[i] == "3" || numArr[i] == "4"){
+                                $("."+alphabetArr[i]+numArr[i]+" .move").addClass("show");
+                            }
+                        }
+                   }
+                }else if(location.indexOf("B") != -1) {
+                    $(".B3 .move").toggleClass("show");
+                    $(".B4 .move").toggleClass("show");
+                }else if(location.indexOf("C") != -1) {
+                    $(".C3").html("<span class='move'><i class='fas fa-circle'></i></span>")
+                    $(".C4").html("<span class='move'><i class='fas fa-circle'></i></span>")
+                }else if(location.indexOf("D") != -1) {
+                    $(".D3").html("<span class='move'><i class='fas fa-circle'></i></span>")
+                    $(".D4").html("<span class='move'><i class='fas fa-circle'></i></span>")
+                }else if(location.indexOf("E") != -1) {
+                    $(".E3").html("<span class='move'><i class='fas fa-circle'></i></span>")
+                    $(".E4").html("<span class='move'><i class='fas fa-circle'></i></span>")
+                }else if(location.indexOf("F") != -1) {
+                    $(".F3").html("<span class='move'><i class='fas fa-circle'></i></span>")
+                    $(".F4").html("<span class='move'><i class='fas fa-circle'></i></span>")
+                }else if(location.indexOf("G") != -1) {
+                    $(".G3").html("<span class='move'><i class='fas fa-circle'></i></span>")
+                    $(".G4").html("<span class='move'><i class='fas fa-circle'></i></span>")
+                }else if(location.indexOf("H") != -1) {
+                    $(".H3").html("<span class='move'><i class='fas fa-circle'></i></span>")
+                    $(".H4").html("<span class='move'><i class='fas fa-circle'></i></span>")
+                }
+            }
+        } else {
 
-        //     }
-        //     if(unitName == "bishop"){
+        }
 
-        //     }
-        //     if(unitName == "queen"){
-
-        //     }
-        //     if(unitName == "king"){
-
-        //     }
-        //     if(unitName == "pawn"){
-
-        //     }
-        // }
-        // if (player == "player1"){
-        //     if(unitName == "rook"){
-                
-        //     }
-        //     if(unitName == "knight"){
-
-        //     }
-        //     if(unitName == "bishop"){
-
-        //     }
-        //     if(unitName == "queen"){
-
-        //     }
-        //     if(unitName == "king"){
-
-        //     }
-        //     if(unitName == "pawn"){
-
-        //     }
-        // }
     });
 });

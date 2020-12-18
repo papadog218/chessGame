@@ -11,3 +11,6 @@ html,body{padding: 0; margin: 0; height: 100%;}
 .row div .player1{color: brown;}
 .row div .player2{color: burlywood}
 i:hover{cursor: pointer;}
+.move i{color: aquamarine;}
+.move{display: none;}
+.move.show{display: block;}
